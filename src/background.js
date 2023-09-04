@@ -89,7 +89,7 @@ async function createWindow() {
 
 app.whenReady().then(() => {
     globalShortcut.register('f5', function () {
-        console.log('f5 is pressed');
+        mainWindow.webContents.reload();
     });
 
     globalShortcut.register('CommandOrControl+R', function () {
